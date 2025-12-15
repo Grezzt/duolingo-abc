@@ -1,0 +1,183 @@
+/* =============================
+   GLOBAL
+============================= */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(
+        180deg,
+        #FFFFFF 0%,
+        #FFFFFF 70%,
+        #F3F4F6 100%
+    );
+    text-align: center;
+    color: #333;
+}
+
+/* =============================
+   HEADER
+============================= */
+.header {
+    position: relative;
+    padding: 20px 20px 10px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
+}
+
+.title h3 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.title p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.mascot {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    width: 80px;
+}
+
+/* =============================
+   GAME BOX
+============================= */
+.game-box {
+    background: #8CB9FF;
+    width: 80%;
+    margin: 25px auto;
+    padding: 30px 20px;
+    border-radius: 24px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.game-box img {
+    width: 150px;
+}
+
+/* =============================
+   QUESTION
+============================= */
+.question {
+    margin: 25px 0 20px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+/* =============================
+   ANSWERS
+============================= */
+.answers {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    gap: 16px;
+    justify-content: center;
+}
+
+.answers label {
+    border: 2px solid #8CB9FF;
+    border-radius: 16px;
+    padding: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #ffffff;
+}
+
+.answers label:hover {
+    transform: translateY(-2px);
+}
+
+.answers input {
+    display: none;
+}
+
+.answers span {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.answers input:checked + span {
+    color: #ffffff;
+}
+
+.answers label:has(input:checked) {
+    background: #8CB9FF;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* =============================
+   BUTTON
+============================= */
+.check-btn {
+    margin-top: 28px;
+    padding: 12px 45px;
+    border: none;
+    border-radius: 25px;
+    background: #8CB9FF;
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.check-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* =============================
+   RESULT MESSAGE
+============================= */
+.result {
+    margin: 25px auto;
+    width: 80%;
+    padding: 14px;
+    border-radius: 18px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.result.correct {
+    background: #C8F7DC;
+    color: #0A7A3C;
+}
+
+.result.wrong {
+    background: #FFD6D6;
+    color: #A00000;
+}
+
+/* =============================
+   FOOTER (SMOOTH GRADIENT)
+============================= */
+footer {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background: linear-gradient(
+        180deg,
+        #F3F4F6 0%,
+        #E6EAF5 35%,
+        #B8C3E6 70%,
+        #9AA9D9 100%
+    );
+    color: #ffffff;
+    font-size: 13px;
+}
+
+footer .icons img {
+    width: 26px;
+    margin: 12px 8px 0;
+    opacity: 0.9;
+}

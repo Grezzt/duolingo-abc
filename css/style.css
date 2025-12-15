@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@600&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Baloo 2', cursive;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(#ccefff, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* awan background */
+.bg-cloud {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url("clouds.png") repeat-x;
+  animation: cloudMove 60s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes cloudMove {
+  from { background-position-x: 0; }
+  to { background-position-x: 2000px; }
+}
+
+/* kartu utama */
+.login-card {
+  background: white;
+  width: 380px;
+  padding: 35px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  z-index: 1;
+}
+
+/* maskot */
+.mascot {
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+/* animasi maskot */
+.wiggle {
+  animation: wiggle 3s infinite;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(2deg); }
+  100% { transform: rotate(0deg); }
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 30px;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* input */
+input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 2px solid #6ccff6;
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ffb703;
+}
+
+/* tombol */
+.btn-main {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  background: #ffb703;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  background: #ff9800;
+  transform: scale(1.05);
+}
+
+/* link */
+.link {
+  display: block;
+  margin-top: 15px;
+  color: #0077cc;
+  text-decoration: none;
+}
+/* avatar register */
+.avatar-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #6ccff6;
+}
+
+.btn-avatar {
+  background: #90dbf4;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-avatar:hover {
+  background: #4cc9f0;
+  transform: scale(1.05);
+}
+.btn-main:active {
+  animation: pop 0.3s;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+/* pesan login */
+.login-message {
+  margin-top: 15px;
+  font-size: 16px;
+  min-height: 20px;
+}
+
+/* pesan sukses */
+.success {
+  color: #2ecc71;
+  animation: pop 0.4s;
+}
+
+/* pesan error */
+.error {
+  color: #e74c3c;
+}
+
+/* animasi salah */
+.shake {
+  animation: shake 0.4s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* animasi pop */
+@keyframes pop {
+  0% { transform: scale(0.8); }
+  100% { transform: scale(1); }
+}
